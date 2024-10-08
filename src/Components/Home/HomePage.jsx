@@ -107,32 +107,32 @@ export default function HomePage() {
           {/* Course cards */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <CourseCard
-              title="English 101"
-              description="Learn the basics of the English"
-              classInfo="Class 300: English 101"
-              students="34 enrolled students"
-              progress="67% course"
+              title="See Best Colleges"
+              description="Find the place of your interest"
+              classInfo="Location, fee structure, campus"
+              students="Around 45000+ colleges"
+              
             />
             <CourseCard
-              title="Human Biology"
-              description="Discover how the brain works"
-              classInfo="Class 766: Human Biology"
-              students="42 enrolled students"
-              progress="33% course"
+              title="Courses"
+              description="Discover trending courses to learn the best"
+              classInfo="Graduate and post graduate"
+              students="180+ available courses to be studied"
+              
             />
             <CourseCard
-              title="World Economy"
-              description="Explore the leading markets"
-              classInfo="Individual Oral Exam Online"
-              students="Monday 15/5 at 11 AM"
-              progress="Sign up to take the"
+              title="Cut-offs"
+              description="Explore last 3yrs cutoff to find best"
+              classInfo="According to your score"
+              students="Year 2021,2022,2023"
+              
             />
             <CourseCard
-              title="Paper Review"
-              description="Review your paper with an"
-              classInfo="Friday 19/5 at 9 AM"
-              students="Individual meeting Online"
-              progress="Sign up for a paper"
+              title="Exams"
+              description="View latest entrance exam updates"
+              classInfo="Dates of application and exam"
+              students="Syllabus, paper pattern and more"
+              
             />
           </div>
 
@@ -206,7 +206,7 @@ function CourseCard({ title, description, classInfo, students, progress }) {
         <div className="mt-4 flex justify-between items-center">
           <div className="text-xs text-gray-500">{progress}</div>
           <button className="text-blue-500 hover:text-blue-600 text-sm font-medium">
-            View Homework
+            View More
           </button>
         </div>
       </div>
