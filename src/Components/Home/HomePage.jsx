@@ -45,7 +45,7 @@ export default function HomePage() {
         } transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0`}
       >
         <div className="flex justify-between items-center p-4 lg:justify-center">
-          <h2 className="text-xl font-semibold">College Navigator</h2>
+          <h2 className="text-xl font-bold">College Navigator</h2>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden">
             <X className="w-6 h-6" />
           </button>
