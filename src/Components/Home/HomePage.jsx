@@ -26,9 +26,7 @@ export default function HomePage() {
           >
             <Menu className="w-6 h-6" />
           </button>
-          <h1 className="text-xl font-semibold text-gray-900">
-            College Navigator
-          </h1>
+          <h1 className="text-xl font-semibold text-gray-900">Course Finder</h1>
           <button
             onClick={() => setRightSidebarOpen(true)}
             className="text-gray-500"
@@ -45,7 +43,7 @@ export default function HomePage() {
         } transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0`}
       >
         <div className="flex justify-between items-center p-4 lg:justify-center">
-          <h2 className="text-xl font-bold">College Navigator</h2>
+          <h2 className="text-xl font-bold">Course Finder</h2>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden">
             <X className="w-6 h-6" />
           </button>
@@ -63,21 +61,21 @@ export default function HomePage() {
             className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200"
           >
             <Search className="w-5 h-5 mr-2" />
-            Discover colleges
+            Explore Courses
           </a>
           <a
             href="#"
             className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200"
           >
             <BookmarkPlus className="w-5 h-5 mr-2" />
-            Bookmarks
+            Bookmarked Courses
           </a>
           <a
             href="#"
             className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200"
           >
             <Star className="w-5 h-5 mr-2" />
-            Reviews
+            Course Reviews
           </a>
         </nav>
       </aside>
@@ -87,7 +85,7 @@ export default function HomePage() {
         <header className="bg-white shadow-sm hidden lg:block">
           <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
             <h1 className="text-2xl font-semibold text-gray-900">
-              Search for colleges
+              Search for Your Ideal Course
             </h1>
           </div>
         </header>
@@ -96,7 +94,7 @@ export default function HomePage() {
           <div className="flex items-center mb-6">
             <input
               type="text"
-              placeholder="Enter a college name or location"
+              placeholder="Enter course name or specialization"
               className="flex-1 p-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600">
@@ -107,32 +105,28 @@ export default function HomePage() {
           {/* Course cards */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <CourseCard
-              title="See Best Colleges"
-              description="Find the place of your interest"
-              classInfo="Location, fee structure, campus"
-              students="Around 45000+ colleges"
-              
+              title="Popular Courses"
+              description="Discover trending courses in various domains"
+              classInfo="Includes IT, Arts, Commerce, and more"
+              students="100,000+ students enrolled"
             />
             <CourseCard
-              title="Courses"
-              description="Discover trending courses to learn the best"
-              classInfo="Graduate and post graduate"
-              students="180+ available courses to be studied"
-              
+              title="Specialized Programs"
+              description="Explore niche courses tailored to your interests"
+              classInfo="From AI to Culinary Arts"
+              students="30+ unique fields"
             />
             <CourseCard
-              title="Cut-offs"
-              description="Explore last 3yrs cutoff to find best"
-              classInfo="According to your score"
-              students="Year 2021,2022,2023"
-              
+              title="Affordable Courses"
+              description="Find quality courses within your budget"
+              classInfo="Low-cost certifications and diplomas"
+              students="500+ budget-friendly options"
             />
             <CourseCard
-              title="Exams"
-              description="View latest entrance exam updates"
-              classInfo="Dates of application and exam"
-              students="Syllabus, paper pattern and more"
-              
+              title="Top-rated Courses"
+              description="Learn from the best-rated instructors"
+              classInfo="Highly reviewed courses across domains"
+              students="Rated 4.5+ by learners"
             />
           </div>
 
@@ -154,7 +148,7 @@ export default function HomePage() {
         } transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0`}
       >
         <div className="flex justify-between items-center p-4 lg:justify-start">
-          <h2 className="text-xl font-semibold">College details</h2>
+          <h2 className="text-xl font-semibold">Course Details</h2>
           <button
             onClick={() => setRightSidebarOpen(false)}
             className="lg:hidden"
@@ -165,20 +159,20 @@ export default function HomePage() {
         <div className="p-4">
           <img
             src="/src/assets/Image.png"
-            alt="College"
+            alt="Course"
             className="w-full h-auto rounded-lg mb-4"
           />
-          <h3 className="text-lg font-semibold mb-2">Course details</h3>
-          <p className="text-sm text-gray-600 mb-4">Students enrolled: 34/40</p>
-          <h3 className="text-lg font-semibold mb-2">Grades & performance</h3>
+          <h3 className="text-lg font-semibold mb-2">Course Overview</h3>
+          <p className="text-sm text-gray-600 mb-4">Enrolled: 34/40 students</p>
+          <h3 className="text-lg font-semibold mb-2">Student Feedback</h3>
           <div className="space-y-2">
-            <GradeItem subject="Mid-term grades" grade="98%" />
-            <GradeItem subject="Art history" grade="72%" />
-            <GradeItem subject="Mathematics" grade="34%" />
+            <GradeItem subject="Content Quality" grade="95%" />
+            <GradeItem subject="Instructor Expertise" grade="90%" />
+            <GradeItem subject="Overall Satisfaction" grade="88%" />
           </div>
           <h3 className="text-lg font-semibold mt-4 mb-2">Notifications</h3>
           <div className="bg-blue-100 p-2 rounded-md text-sm text-blue-800">
-            Bookmark this college for later!
+            Save this course to your bookmarks!
           </div>
         </div>
       </aside>
@@ -186,7 +180,7 @@ export default function HomePage() {
   );
 }
 
-function CourseCard({ title, description, classInfo, students, progress }) {
+function CourseCard({ title, description, classInfo, students }) {
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden">
       <div className="p-4">
@@ -204,7 +198,6 @@ function CourseCard({ title, description, classInfo, students, progress }) {
           </div>
         </div>
         <div className="mt-4 flex justify-between items-center">
-          <div className="text-xs text-gray-500">{progress}</div>
           <button className="text-blue-500 hover:text-blue-600 text-sm font-medium">
             View More
           </button>
